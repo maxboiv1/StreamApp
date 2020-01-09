@@ -1,43 +1,51 @@
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
-import {ExpoLinksView} from '@expo/samples';
-import {Block, Button, Card, Icon, Input, NavBar, Text} from 'galio-framework';
-import MovieScreen from "./screens/MovieScreen";
+import {ScrollView, StyleSheet, View, Dimensions,TouchableWithoutFeedback, Image} from 'react-native';
+import {Block, Button, Card, Theme, Text} from 'galio-framework';
 
-export default function MovieScreen() {
-    return (
-        <ScrollView>
-            <View style={styles.container}>
-                <Card
-                    flex
-                    borderless
-                    style={styles.card}
-                    title="6 Underground"
-                    caption="Durée : 2h08"
-                    location="USA, 2019"
-                    avatar="https://www.presse-citron.net/wordpress_prod/wp-content/uploads/2019/10/netflix.jpg"
-                    image="http://hdqwalls.com/wallpapers/6-underground-4k-hj.jpg"
-                />
-            </View>
-        </ScrollView>
-    );
+class MovieScreen extends React.Component {
+    render() {
+        const { navigation, product, horizontal, full, style, priceColor, imageStyle } = this.props;
+        const imageStyles = [styles.image, full ? styles.fullImage : styles.horizontalImage, imageStyle];
+
+        return (
+            <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro', { product: product })}>
+                    <Block flex style={[styles.imageContainer, styles.shadow]}>
+                        <Image source={{ uri: 'http://hdqwalls.com/wallpapers/6-underground-4k-hj.jpg' }} style={imageStyles} />
+                    </Block>
+                </TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro', { product: product })}>
+                    <Block flex space="between" style={styles.productDescription}>
+                        <Text size={14} style={styles.productTitle}>vSDg</Text>
+                        <Text size={12} muted={!priceColor} color={priceColor}>veR</Text>
+                    </Block>
+                </TouchableWithoutFeedback>
+            </Block>
+        );
+    }
 }
 
-LinksScreen.navigationOptions = {
+MovieScreen.navigationOptions = {
     title: '{Nom du film}',
 };
 
 const styles = StyleSheet.create({
-    container: {
+
+    productTitle: {
         flex: 1,
-        marginTop: 15,
-        marginBottom: 15,
-        marginLeft: 5,
-        marginRight: 5,
-        backgroundColor: '#fff',
+        flexWrap: 'wrap',
+        paddingBottom: 6,
     },
-    card: {
-        marginBottom: 2.5,
-        marginTop: 2.5,
+
+    imageContainer: {
+        elevation: 1,
     },
+
+    horizontalImage: {
+        height: 122,
+        width: 'auto',
+    },
+
 });
+
+export default MovieScreen;

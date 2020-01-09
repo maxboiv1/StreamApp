@@ -7,7 +7,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import MovieScreen from "./screens/MovieScreen";
+import MovieScreen from "../screens/MovieScreen";
 
 const config = Platform.select({
     web: {headerMode: 'screen'},
@@ -76,12 +76,12 @@ const MovieStack = createStackNavigator(
     config
 );
 
-/*MovieStack.navigationOptions = {
-    tabBarLabel: 'Favoris',
+MovieStack.navigationOptions = {
+    tabBarLabel: 'Film',
     tabBarIcon: ({ focused }) => (
-        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-heart'} />
+        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-star'} />
     ),
-};*/
+};
 
 MovieStack.path = '';
 
@@ -89,7 +89,7 @@ const tabNavigator = createBottomTabNavigator({
     HomeStack,
     LinksStack,
     SettingsStack,
-    MovieStack,
+    MovieStack
 });
 
 tabNavigator.path = '';

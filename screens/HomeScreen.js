@@ -13,8 +13,7 @@ class HomeScreen extends React.Component {
                     style={styles.container}
                     contentContainerStyle={styles.contentContainer}>
                     <View style={styles.welcomeContainer}>
-
-
+                        <Text>COUCOU</Text>
                     </View>
                 </ScrollView>
             </View>
