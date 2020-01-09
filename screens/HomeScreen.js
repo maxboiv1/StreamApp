@@ -13,7 +13,7 @@ class HomeScreen extends React.Component {
                     style={styles.container}
                     contentContainerStyle={styles.contentContainer}>
                     <View style={styles.welcomeContainer}>
-                        <Text>COUCOU</Text>
+                        <Image source={{uri: '../assets/images/accueilapp.png'}}/>
                     </View>
                 </ScrollView>
             </View>
