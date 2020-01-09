@@ -16,7 +16,7 @@ class MovieScreen extends React.Component {
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro', { product: product })}>
                     <Block flex space="between" style={styles.productDescription}>
-                        <Text size={14} style={styles.productTitle}>vSDg</Text>
+                        <Text size={14} style={styles.productTitle}>{navigation.getParam('film').title}</Text>
                         <Text size={12} muted={!priceColor} color={priceColor}>veR</Text>
                     </Block>
                 </TouchableWithoutFeedback>
