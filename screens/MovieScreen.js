@@ -26,26 +26,8 @@ class MovieScreen extends React.Component {
 }
 
 MovieScreen.navigationOptions = {
-    title: '{Nom du film}',
+    title: '{navigation.getParam(\'film\').title}',
 };
 
-const styles = StyleSheet.create({
-
-    productTitle: {
-        flex: 1,
-        flexWrap: 'wrap',
-        paddingBottom: 6,
-    },
-
-    imageContainer: {
-        elevation: 1,
-    },
-
-    horizontalImage: {
-        height: 122,
-        width: 'auto',
-    },
-
-});
 
 export default MovieScreen;

@@ -8,14 +8,10 @@ import {MonoText} from '../components/StyledText';
 class HomeScreen extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <ScrollView
-                    style={styles.container}
-                    contentContainerStyle={styles.contentContainer}>
-                    <View style={styles.welcomeContainer}>
-                        <Image source={{uri: '../assets/images/accueilapp.png'}}/>
-                    </View>
-                </ScrollView>
+            <View >
+                <Image style={styles.container}
+                    source={require('../assets/images/accueilapp.png')}/>
+
             </View>
         );
     }
@@ -46,8 +42,8 @@ HomeScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
+        width: '100%',
+        height: '100%'
     },
     developmentModeText: {
         marginBottom: 20,
