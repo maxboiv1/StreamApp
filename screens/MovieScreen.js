@@ -19,16 +19,30 @@ class MovieScreen extends React.Component {
                         style={styles.image}
                         source={{uri: navigation.getParam('film').affiche}}
                     />
-                    <Block  style={styles.infos}>
+                    <Block style={styles.infos}>
                         <Text style={styles.titre}>{navigation.getParam('film').title}</Text>
-                        <Text>Date de sortie: {navigation.getParam('film').datesortie}</Text>
-                        <Text>Réalisateur: {navigation.getParam('film').real}</Text>
-                        <Text>Acteurs: {navigation.getParam('film').acteurs}</Text>
-                        <Text>Style: {navigation.getParam('film').style}</Text>
+                        <Block style={styles.infosdisplay}>
+                            <Text style={styles.infostitle}>Date de sortie: </Text>
+                            <Text>{navigation.getParam('film').datesortie}</Text>
+                        </Block>
+                        <View style={styles.infosdisplay}>
+                            <Text style={styles.infostitle}>Réalisateur: </Text>
+                            <Text>{navigation.getParam('film').real}</Text>
+                        </View>
+                        <View style={styles.infosdisplay}>
+                            <Text style={styles.infostitle}>Acteurs: </Text>
+                            <Text>{navigation.getParam('film').acteurs}</Text>
+                        </View>
+                        <View style={styles.infosdisplay}>
+                            <Text style={styles.infostitle}>Style: </Text>
+                            <Text>{navigation.getParam('film').style}</Text>
+                        </View>
+
                         <Text>{navigation.getParam('film').caption}</Text>
                     </Block>
                 </Block>
-                <Text style={styles.synopsis}>Synopsis: {navigation.getParam('film').desc}</Text>
+                <Text style={styles.subtitle}>Synopsis: </Text>
+                <Text style={styles.synopsis}>{navigation.getParam('film').desc}</Text>
             </ScrollView>
         );
     }
@@ -45,8 +59,11 @@ const styles = StyleSheet.create({
     },
     container: {
         margin: 10,
+        marginTop: 20,
         marginBottom: 0,
         flexDirection: 'row',
+        width: null,
+        height: null,
     },
     image: {
         width: 125,
@@ -54,6 +71,7 @@ const styles = StyleSheet.create({
     },
     synopsis: {
         margin: 10,
+        marginTop: 0,
     },
     infos: {
         marginTop: 0,
@@ -63,6 +81,17 @@ const styles = StyleSheet.create({
     titre: {
         fontWeight: 'bold',
         marginBottom: 10,
+    },
+    subtitle: {
+        margin: 10,
+        fontWeight: 'bold',
+        marginBottom: 10,
+    },
+    infosdisplay: {
+        flexDirection: 'row',
+    },
+    infostitle: {
+        color: '#480EA5',
     },
 });
 

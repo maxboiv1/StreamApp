@@ -6,7 +6,6 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
 import MovieScreen from "../screens/MovieScreen";
 
 const config = Platform.select({
@@ -53,21 +52,7 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
-const SettingsStack = createStackNavigator(
-    {
-        Settings: SettingsScreen,
-    },
-    config
-);
 
-SettingsStack.navigationOptions = {
-    tabBarLabel: 'Favoris',
-    tabBarIcon: ({focused}) => (
-        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-heart'}/>
-    ),
-};
-
-SettingsStack.path = '';
 
 const MovieStack = createStackNavigator(
     {
@@ -88,7 +73,6 @@ MovieStack.path = '';
 const tabNavigator = createBottomTabNavigator({
     HomeStack,
     LinksStack,
-    SettingsStack,
     MovieStack
 });
 
