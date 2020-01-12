@@ -46,7 +46,7 @@ class MovieScreen extends React.Component {
                 <Text style={styles.synopsis}>{navigation.getParam('film').desc}</Text>
                 <Video
                     style={styles.video}
-                    source={require('../assets/film1.mp4')}
+                    source={{uri: navigation.getParam('film').ba}}
                     rate={1.0}
                     volume={1.0}
                     resizeMode="cover"
