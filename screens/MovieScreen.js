@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View, Image} from 'react-native';
-import {Block, Button, Theme, Text} from 'galio-framework';
+import { Button, Theme, Text} from 'galio-framework';
+import { Video } from 'expo-av';
 
 class MovieScreen extends React.Component {
     render() {
@@ -14,17 +15,17 @@ class MovieScreen extends React.Component {
                     source={require('../assets/images/bandeauapp.png')}
                 />
 
-                <Block style={styles.container}>
+                <View style={styles.container}>
                     <Image
                         style={styles.image}
                         source={{uri: navigation.getParam('film').affiche}}
                     />
-                    <Block style={styles.infos}>
+                    <View style={styles.infos}>
                         <Text style={styles.titre}>{navigation.getParam('film').title}</Text>
-                        <Block style={styles.infosdisplay}>
+                        <View style={styles.infosdisplay}>
                             <Text style={styles.infostitle}>Date de sortie: </Text>
                             <Text>{navigation.getParam('film').datesortie}</Text>
-                        </Block>
+                        </View>
                         <View style={styles.infosdisplay}>
                             <Text style={styles.infostitle}>Réalisateur: </Text>
                             <Text>{navigation.getParam('film').real}</Text>
@@ -39,10 +40,21 @@ class MovieScreen extends React.Component {
                         </View>
 
                         <Text>{navigation.getParam('film').caption}</Text>
-                    </Block>
-                </Block>
+                    </View>
+                </View>
                 <Text style={styles.subtitle}>Synopsis: </Text>
                 <Text style={styles.synopsis}>{navigation.getParam('film').desc}</Text>
+                <Video
+                    style={styles.video}
+                    source={{uri: navigation.getParam('film').ba}}
+                    rate={1.0}
+                    volume={1.0}
+                    resizeMode="cover"
+                    useNativeControls
+                    shouldPlay
+                    isLooping
+                />
+                <Text>{navigation.getParam('film').url}</Text>
             </ScrollView>
         );
     }
@@ -62,8 +74,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginBottom: 0,
         flexDirection: 'row',
-        width: null,
-        height: null,
+        paddingRight: 250,
     },
     image: {
         width: 125,
@@ -76,7 +87,6 @@ const styles = StyleSheet.create({
     infos: {
         marginTop: 0,
         margin: 10,
-        marginRight: 10,
     },
     titre: {
         fontWeight: 'bold',
@@ -92,6 +102,11 @@ const styles = StyleSheet.create({
     },
     infostitle: {
         color: '#480EA5',
+    },
+    video: {
+        margin: 10,
+        width: '95%',
+        height: 175,
     },
 });
 
