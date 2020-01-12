@@ -53,6 +53,24 @@ class MovieScreen extends React.Component {
                     shouldPlay
                     isLooping
                 />
+                <Video
+                    style={styles.video}
+                    source={require(navigation.getParam('film').ba)}
+                    rate={1.0}
+                    volume={1.0}
+                    resizeMode="cover"
+                    shouldPlay
+                    isLooping
+                />
+                <Video
+                    style={styles.video}
+                    source={require('../assets/film1.mp4')}
+                    rate={1.0}
+                    volume={1.0}
+                    resizeMode="cover"
+                    shouldPlay
+                    isLooping
+                />
                 <Text>{navigation.getParam('film').url}</Text>
             </ScrollView>
         );
