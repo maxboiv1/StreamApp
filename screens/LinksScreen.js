@@ -25,7 +25,7 @@ class LinksScreen extends React.Component {
                     avatar: 'https://pbs.twimg.com/profile_images/1212668668657754112/Tkyjal3Z_400x400.jpg',
                     image: 'http://hdqwalls.com/wallpapers/6-underground-4k-hj.jpg',
                     affiche: 'http://fr.web.img3.acsta.net/pictures/19/11/14/15/36/5224064.png',
-                    ba: 'film1'
+                    ba: 'film1',
                 },
                 {
                     title: 'Joker',
@@ -39,7 +39,7 @@ class LinksScreen extends React.Component {
                     avatar: 'https://www.graphiline.com/src/images/news/articles/ef02d5c81d0baca2b6242d46520a2117.jpg',
                     image: 'https://www.julsa.fr/wp-content/uploads/2019/10/joker.jpg',
                     affiche: 'https://images-na.ssl-images-amazon.com/images/I/71wbalyU7tL._SY879_.jpg',
-                    ba: 'film2'
+                    ba: 'film2',
                 },
                 {
                     title: 'Le mans 66',
@@ -53,7 +53,7 @@ class LinksScreen extends React.Component {
                     avatar: 'https://yt3.ggpht.com/a/AGF-l78s1QkkLeDJ_jR_5m_Rpf3BdxaVr0zF0V4n8w=s900-c-k-c0xffffffff-no-rj-mo',
                     image: 'https://freakingeek.com/wp-content/uploads/2019/11/LeMans66-Banniere-800x445.jpg',
                     affiche: 'https://www.cgrcinemas.fr/stsaturnin/evenement/AVP_LE_MANS_06.10_MANS_66_A4_PORTRAIT.jpg',
-                    ba: 'film3'
+                    ba: 'film3',
                 },
                 {
                     title: 'Le chant du loup',
@@ -69,7 +69,7 @@ class LinksScreen extends React.Component {
                     avatar: 'https://yt3.ggpht.com/a/AGF-l78s1QkkLeDJ_jR_5m_Rpf3BdxaVr0zF0V4n8w=s900-c-k-c0xffffffff-no-rj-mo',
                     image: 'https://static.latribune.fr/full_width/1127343/chant-du-loup.jpg',
                     affiche: 'http://fr.web.img2.acsta.net/r_1920_1080/pictures/19/02/05/15/25/4180753.jpg',
-                    ba: 'film4'
+                    ba: 'film4',
                 },
                 {
                     title: 'Uncut James',
@@ -83,7 +83,7 @@ class LinksScreen extends React.Component {
                     avatar: 'https://www.graphiline.com/src/images/news/articles/ef02d5c81d0baca2b6242d46520a2117.jpg',
                     image: 'https://media.paperblog.fr/i/898/8984665/premiere-affiche-teaser-us-uncut-gems-benny-j-L-YiC4wz.jpeg',
                     affiche: 'http://fr.web.img5.acsta.net/pictures/20/01/08/16/54/5502811.jpg',
-                    ba: 'film5'
+                    ba: 'film5',
                 }
             ]
         }
