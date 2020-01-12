@@ -46,11 +46,10 @@ class MovieScreen extends React.Component {
                 <Text style={styles.synopsis}>{navigation.getParam('film').desc}</Text>
                 <Video
                     style={styles.video}
-                    source={{uri: navigation.getParam('film').ba}}
+                    source={require('../assets/film1.mp4')}
                     rate={1.0}
                     volume={1.0}
                     resizeMode="cover"
-                    useNativeControls
                     shouldPlay
                     isLooping
                 />
