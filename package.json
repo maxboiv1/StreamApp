@@ -14,6 +14,7 @@
   "dependencies": {
     "@expo/samples": "~36.0.0",
     "@expo/vector-icons": "~10.0.0",
+    "@react-native-community/netinfo": "4.6.0",
     "@react-navigation/web": "~1.0.0-alpha.9",
     "expo": "~36.0.0",
     "expo-asset": "~8.0.0",
@@ -23,8 +24,8 @@
     "expo-video-player": "^1.5.5",
     "expo-web-browser": "~8.0.0",
     "galio-framework": "^0.6.3",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-gesture-handler": "~1.5.0",
     "react-native-reanimated": "~1.4.0",
@@ -34,7 +35,8 @@
     "react-navigation": "~4.0.10",
     "react-navigation-stack": "~1.10.3",
     "react-navigation-tabs": "~2.6.2",
-    "@react-native-community/netinfo": "4.6.0"
+    "redux": "^4.0.5",
+    "video-react": "^0.14.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

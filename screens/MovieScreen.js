@@ -44,18 +44,11 @@ class MovieScreen extends React.Component {
                 </View>
                 <Text style={styles.subtitle}>Synopsis: </Text>
                 <Text style={styles.synopsis}>{navigation.getParam('film').desc}</Text>
+
+                {/*Cette balise devait gérer les bandes annonces des films dynamiquement mais ça ne fonctionne pas*/}
                 <Video
                     style={styles.video}
                     source={{uri: navigation.getParam('film').ba}}
-                    rate={1.0}
-                    volume={1.0}
-                    resizeMode="cover"
-                    shouldPlay
-                    isLooping
-                />
-                <Video
-                    style={styles.video}
-                    source={require(navigation.getParam('film').ba)}
                     rate={1.0}
                     volume={1.0}
                     resizeMode="cover"
